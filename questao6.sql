@@ -1,2 +1,6 @@
-create procedure quadrado(valor int)
-out valor * valor;
+DELIMITER $$
+CREATE PROCEDURE quadrado(INOUT valor INT)
+BEGIN
+SET valor = valor * valor;
+END $$
+DELIMITER ;
